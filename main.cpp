@@ -5,14 +5,14 @@
 int trapWater(const std::vector<int>& heights) {
 	int n = heights.size();
 	if (n <= 2) {
-		return 0; // Ìåíüøå äâóõ ïëèòîê, âîäà íå ñêàïëèâàåòñÿ
+		return 0; // ĞœĞµĞ½ÑŒÑˆĞµ Ğ´Ğ²ÑƒÑ… Ğ¿Ğ»Ğ¸Ñ‚Ğ¾Ğº, Ğ²Ğ¾Ğ´Ğ° Ğ½Ğµ ÑĞºĞ°Ğ¿Ğ»Ğ¸Ğ²Ğ°ĞµÑ‚ÑÑ
 	}
 
-	int left = 0;        // Ëåâûé óêàçàòåëü
-	int right = n - 1;   // Ïğàâûé óêàçàòåëü
-	int leftMax = 0;     // Ìàêñèìàëüíàÿ âûñîòà ñëåâà
-	int rightMax = 0;    // Ìàêñèìàëüíàÿ âûñîòà ñïğàâà
-	int water = 0;       // Ñóììà âîäû
+	int left = 0;        // Ğ›ĞµĞ²Ñ‹Ğ¹ ÑƒĞºĞ°Ğ·Ğ°Ñ‚ĞµĞ»ÑŒ
+	int right = n - 1;   // ĞŸÑ€Ğ°Ğ²Ñ‹Ğ¹ ÑƒĞºĞ°Ğ·Ğ°Ñ‚ĞµĞ»ÑŒ
+	int leftMax = 0;     // ĞœĞ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğ°Ñ Ğ²Ñ‹ÑĞ¾Ñ‚Ğ° ÑĞ»ĞµĞ²Ğ°
+	int rightMax = 0;    // ĞœĞ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğ°Ñ Ğ²Ñ‹ÑĞ¾Ñ‚Ğ° ÑĞ¿Ñ€Ğ°Ğ²Ğ°
+	int water = 0;       // Ğ¡ÑƒĞ¼Ğ¼Ğ° Ğ²Ğ¾Ğ´Ñ‹
 
 	while (left < right) {
 		if (heights[left] < heights[right]) {
@@ -42,7 +42,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	std::vector<int> heights = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
 	int trappedWater = trapWater(heights);
-	std::cout << "Îáúåì ñêîïèâøåéñÿ âîäû: " << trappedWater << " åäèíèö" << std::endl;
+	std::cout << "ĞĞ±ÑŠĞµĞ¼ ÑĞºĞ¾Ğ¿Ğ¸Ğ²ÑˆĞµĞ¹ÑÑ Ğ²Ğ¾Ğ´Ñ‹: " << trappedWater << " ĞµĞ´Ğ¸Ğ½Ğ¸Ñ†" << std::endl;
 
 	return 0;
 }
